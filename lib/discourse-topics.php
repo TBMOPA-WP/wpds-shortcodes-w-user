@@ -185,6 +185,10 @@ class DiscourseTopics {
 			$args['username_position'] = esc_attr( wp_unslash( $request['username_position'] ) );
 		}
 
+		if ( ! empty( $request['name_position'] ) ) {
+			$args['name_position'] = esc_attr( wp_unslash( $request['name_position'] ) );
+		}
+
 		if ( ! empty( $request['category_position'] ) ) {
 			$args['category_position'] = esc_attr( wp_unslash( $request['category_position'] ) );
 		}
@@ -230,6 +234,7 @@ class DiscourseTopics {
 				'tile'              => 'false',
 				'excerpt_length'    => null,
 				'username_position' => 'top',
+				'name_position'     => 'top',
 				'category_position' => 'top',
 				'date_position'     => 'top',
 				'ajax_timeout'      => 2,
