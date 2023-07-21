@@ -136,13 +136,14 @@ trait Formatter {
 		$tile              = ' data-wpds-tile="' . esc_attr( $args['tile'] ) . '"';
 		$excerpt_length    = ' data-wpds-excerpt-length="' . esc_attr( $args['excerpt_length'] ) . '"';
 		$username_position = ' data-wpds-username-position="' . esc_attr( $args['username_position'] ) . '"';
+		$name_position     = ' data-wpds-name-position="' . esc_attr( $args['name_position'] ) . '"';
 		$category_position = ' data-wpds-category-position="' . esc_attr( $args['category_position'] ) . '"';
 		$date_position     = ' data-wpds-date-position="' . esc_attr( $args['date_position'] ) . '"';
 		$ajax_timeout      = ' data-wpds-ajax-timeout="' . esc_attr( $args['ajax_timeout'] ) . '"';
 		$id                = ' data-wpds-id="' . esc_attr( $args['id'] ) . '"';
 
 		$output = '<div class="wpds-topic-shortcode-options" ' . $max_topics . $cache_duration . $display_avatars . $source .
-				  $period . $tile . $excerpt_length . $username_position . $category_position . $date_position . $ajax_timeout .
+				  $period . $tile . $excerpt_length . $username_position . $name_position . $category_position . $date_position . $ajax_timeout .
 				  $id . '></div>';
 
 		return $output;
