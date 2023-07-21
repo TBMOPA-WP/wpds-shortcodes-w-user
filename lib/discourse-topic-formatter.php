@@ -76,6 +76,7 @@ class DiscourseTopicFormatter {
 			$source            = $args['source'];
 			$poster_avatar_url = '';
 			$poster_username   = '';
+			$poster_name       = $user_data['name'];
 			$topic_count       = 0;
 			$use_ajax          = ! empty( $this->options['wpds_ajax_refresh'] ) && 'latest' === $source;
 			$ajax_class        = $use_ajax ? ' wpds-topiclist-refresh' : '';
@@ -109,6 +110,7 @@ class DiscourseTopicFormatter {
 							foreach ( $users as $user ) {
 								if ( $original_poster_id === $user['id'] ) {
 									$poster_username   = $user['username'];
+									$poster_name   = $user['name'];
 									$avatar_template   = str_replace( '{size}', 44, $user['avatar_template'] );
 									// For forums hosted by discourse.org the letter avatar template is an absolute link.
 									if ( ! preg_match( '/^http/', $avatar_template ) ) {
@@ -130,6 +132,10 @@ class DiscourseTopicFormatter {
 
 					if ( 'top' === $args['username_position'] ) {
 						$output .= '<span class="wpds-topiclist-username">' . esc_html( $poster_username ) . '</span> ';
+					}
+
+					if ( 'top' === $args['name_position'] ) {
+						$output .= '<span class="wpds-topiclist-name">' . esc_html( $poster_name ) . '</span> ';
 					}
 
 					if ( 'top' === $args['date_position'] ) {
@@ -159,6 +165,9 @@ class DiscourseTopicFormatter {
 					}
 					if ( 'bottom' === $args['username_position'] ) {
 						$output .= '<span class="wpds-topiclist-username">' . esc_html( $poster_username ) . '</span> ';
+					}
+					if ( 'bottom' === $args['name_position'] ) {
+						$output .= '<span class="wpds-topiclist-name">' . esc_html( $poster_name ) . '</span> ';
 					}
 					if ( 'bottom' === $args['date_position'] ) {
 						$output .= '<span class="wpds-term">' . __( 'posted on ', 'wpds' ) . '</span>';
