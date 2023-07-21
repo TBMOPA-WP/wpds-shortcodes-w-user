@@ -217,6 +217,10 @@ ul.wpds-tile {
 	padding-left: 6px;
 }
 
+.wpds-tile .wpds-topiclist-name {
+	padding-left: 6px;
+}
+
 /* Create tiles for widths > 370px. */
 @media screen and (min-width: 370px) {
 
