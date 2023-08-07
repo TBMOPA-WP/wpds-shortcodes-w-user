@@ -10,7 +10,7 @@ NO MORE TEST! The WP Discourse Shortcodes plugin provides a few shortcodes for d
 
 - `discourse_users` - displays a list of Discourse users
 
-- `discourse_link`   - creates a link to your Discourse forum
+- `discourse_link`   - TEST OF A CHANGE IN REPO creates a link to your Discourse forum
 
 ## Shortcode Attributes
 
