@@ -1,6 +1,6 @@
 # WP Discourse Shortcodes
 
-ANOTHER TEST! The WP Discourse Shortcodes plugin provides a few shortcodes for displaying Discourse content on your WordPress site. It currently has the following shortcodes:
+JUST ONE MORE TEST! The WP Discourse Shortcodes plugin provides a few shortcodes for displaying Discourse content on your WordPress site. It currently has the following shortcodes:
 
 - `discourse_topics` - displays a Discourse topic list
 
